@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yupi.springbootinit.mapper.HeartMapper">
+
+    <resultMap id="BaseResultMap" type="com.yupi.springbootinit.model.entity.Heart">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="heartRate" column="heartRate" jdbcType="INTEGER"/>
+            <result property="breathRate" column="breathRate" jdbcType="INTEGER"/>
+            <result property="createDate" column="createDate" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="createUser" jdbcType="VARCHAR"/>
+            <result property="isDelete" column="isDelete" jdbcType="INTEGER"/>
+            <result property="isHigh" column="isHigh" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,heartRate,breathRate,
+        createDate,createUser,isHigh,isDelete
+    </sql>
+</mapper>
