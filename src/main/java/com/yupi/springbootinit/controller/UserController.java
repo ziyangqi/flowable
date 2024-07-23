@@ -23,6 +23,9 @@ import com.yupi.springbootinit.service.UserService;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -38,6 +41,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
+@Api(tags = "用户相关接口")
 @RestController
 @RequestMapping("/user")
 @Slf4j
@@ -57,6 +61,7 @@ public class UserController {
      * @param userRegisterRequest
      * @return
      */
+
     @PostMapping("/register")
     public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
         if (userRegisterRequest == null) {
@@ -79,6 +84,7 @@ public class UserController {
      * @param request
      * @return
      */
+    @ApiOperation("登录")
     @PostMapping("/login")
     public BaseResponse<LoginUserVO> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request) {
         if (userLoginRequest == null) {

@@ -1,5 +1,4 @@
 package com.yupi.springbootinit.config;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -26,8 +25,8 @@ public class Knife4jConfig {
     public Docket defaultApi2() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
-                        .title("接口文档")
-                        .description("zyq-backend")
+                        .title("接口文档demo")
+                        .description("H1Z0)")
                         .version("1.0")
                         .build())
                 .select()

@@ -18,9 +18,9 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/AiHeart
+    url: jdbc:mysql://localhost:3306/mydb
     username: root
-    password: toot
+    password: 123456
   # Redis 配置
   # todo 需替换配置，然后取消注释
   redis:
@@ -39,11 +39,11 @@ spring:
     multipart:
       # 大小限制
       max-file-size: 10MB
-  rabbitmq:
-    host: localhost
-    port: 5672
-    password: guest
-    username: guest
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    password: guest
+#    username: guest
 server:
   address: 0.0.0.0
   port: 8080
@@ -96,3 +96,7 @@ yuapi:
   client:
     access-key: poupeivh6pgcjl3qot4rombsmversfal
     secret-key: 1d33woto7tp9nyatvmyd9twd6d133bnl
+knife4j:
+  enable: true
+  setting:
+    enableDynamicParameter: true

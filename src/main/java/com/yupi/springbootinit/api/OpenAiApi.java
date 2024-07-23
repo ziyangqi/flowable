@@ -1,21 +1,21 @@
-package com.yupi.springbootinit.api;
-
-import cn.hutool.http.HttpRequest;
-import cn.hutool.json.JSONUtil;
-import com.yupi.springbootinit.exception.BusinessException;
-import org.springframework.stereotype.Service;
-
-import java.util.HashMap;
-import java.util.Map;
-
-/**
- * 调用 AI 平台的示例代码
- */
-@Service
-public class OpenAiApi {
-
-    public static void main(String[] args) {
-
+//package com.yupi.springbootinit.api;
+//
+//import cn.hutool.http.HttpRequest;
+//import cn.hutool.json.JSONUtil;
+//import com.yupi.springbootinit.exception.BusinessException;
+//import org.springframework.stereotype.Service;
+//
+//import java.util.HashMap;
+//import java.util.Map;
+//
+///**
+// * 调用 AI 平台的示例代码
+// */
+//@Service
+//public class OpenAiApi {
+//
+//    public static void main(String[] args) {
+//
 //        /**
 //         * AI 对话（需要自己创建请求响应对象）
 //         *
@@ -36,6 +36,6 @@ public class OpenAiApi {
 //                    .body();
 //            return JSONUtil.toBean(result, CreateChatCompletionResponse.class);
 //        }
-
-    }
-}
+//
+//    }
+//}
