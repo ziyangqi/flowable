@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  * 
- * @TableName attestationr
+ *
  */
 @TableName(value ="attestationr")
 @Data
