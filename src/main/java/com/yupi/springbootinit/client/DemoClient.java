@@ -1,6 +1,7 @@
 package com.yupi.springbootinit.client;
 
 import com.yupi.springbootinit.common.BaseResponse;
+import com.yupi.springbootinit.model.dto.process.ProcessHandleDTO;
 import com.yupi.springbootinit.model.dto.process.ProcessListQuery;
 import com.yupi.springbootinit.model.dto.process.ProcessStartDTO;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -17,4 +18,8 @@ public interface DemoClient {
     HashMap<String, Object> getProcessList(ProcessListQuery processListQuery);
     @PostMapping(value = "/a1bpmn/api/runtime/instance/v2/start",headers = "Authorization=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJhY2NvdW50XCI6XCJ6aHl3MDAwMDI1MjBcIixcImZ1bGxuYW1lXCI6XCLokaPmn7PpnZJcIixcImlkXCI6XCJhMGUxZTNhNC03OWEyLTQxMDktOTgzNS0xMWM3OGZkY2M1YzdcIixcInRlbmFudElkXCI6XCJ6aHl3XCIsXCJ1c2VyTm9cIjpcInpoeXcwMDAwMjUyMFwifSIsImV4cCI6MTcyMjA2Mjc4OX0.a8aPocSRAkD0nUpiHeN8g8Th5niedKXaY58WCD0Gt34h9fjmo4Bj99zTGN0DXZd3SPqDK-2y0Kph4yTyyrPZvA")
     HashMap<String, Object> startProcess(ProcessStartDTO processStartDTO);
+    @PostMapping(value = "/a1bpmn/api/runtime/task/v2/complete",headers = "Authorization=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJhY2NvdW50XCI6XCJ6aHl3MDAwMDI1MjBcIixcImZ1bGxuYW1lXCI6XCLokaPmn7PpnZJcIixcImlkXCI6XCJhMGUxZTNhNC03OWEyLTQxMDktOTgzNS0xMWM3OGZkY2M1YzdcIixcInRlbmFudElkXCI6XCJ6aHl3XCIsXCJ1c2VyTm9cIjpcInpoeXcwMDAwMjUyMFwifSIsImV4cCI6MTcyMjA2Mjc4OX0.a8aPocSRAkD0nUpiHeN8g8Th5niedKXaY58WCD0Gt34h9fjmo4Bj99zTGN0DXZd3SPqDK-2y0Kph4yTyyrPZvA")
+    HashMap<String, Object> completeProcess(ProcessHandleDTO processHandleDTO);
+    @PostMapping(value = "/a1bpmn/api/runtime/task/v1/getTaskSpeed",headers = "Authorization=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJhY2NvdW50XCI6XCJ6aHl3MDAwMDI1MjBcIixcImZ1bGxuYW1lXCI6XCLokaPmn7PpnZJcIixcImlkXCI6XCJhMGUxZTNhNC03OWEyLTQxMDktOTgzNS0xMWM3OGZkY2M1YzdcIixcInRlbmFudElkXCI6XCJ6aHl3XCIsXCJ1c2VyTm9cIjpcInpoeXcwMDAwMjUyMFwifSIsImV4cCI6MTcyMjA2Mjc4OX0.a8aPocSRAkD0nUpiHeN8g8Th5niedKXaY58WCD0Gt34h9fjmo4Bj99zTGN0DXZd3SPqDK-2y0Kph4yTyyrPZvA")
+    HashMap<String, Object> getTaskSpeed(String taskId);
 }
