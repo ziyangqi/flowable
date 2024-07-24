@@ -20,6 +20,16 @@ public class ResultUtils {
     }
 
     /**
+     * 流程成功
+     * @param data
+     * @return
+     * @param <T>
+     */
+    public static <T> BaseResponse<T> successFlowable(T data) {
+        return new BaseResponse<>(0, data, "操作成功");
+    }
+
+    /**
      * 失败
      *
      * @param errorCode

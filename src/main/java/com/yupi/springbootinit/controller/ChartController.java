@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
 import com.yupi.springbootinit.annotation.AuthCheck;
-import com.yupi.springbootinit.bizmq.BiMessageProducer;
 import com.yupi.springbootinit.common.BaseResponse;
 import com.yupi.springbootinit.common.DeleteRequest;
 import com.yupi.springbootinit.common.ErrorCode;
@@ -64,8 +63,7 @@ public class ChartController {
     @Resource
     private ThreadPoolExecutor threadPoolExecutor;
 
-    @Resource
-    private BiMessageProducer biMessageProducer;
+    //private BiMessageProducer biMessageProducer;
 
 
     // region 增删改查
@@ -510,7 +508,7 @@ public class ChartController {
         boolean saveResult = chartService.save(chart);
         ThrowUtils.throwIf(!saveResult, ErrorCode.SYSTEM_ERROR, "图表保存失败");
         long newChartId = chart.getId();
-        biMessageProducer.sendMessage(String.valueOf(newChartId));
+        //biMessageProducer.sendMessage(String.valueOf(newChartId));
         BiResponse biResponse = new BiResponse();
         biResponse.setChartId(newChartId);
         return ResultUtils.success(biResponse);

@@ -39,11 +39,11 @@ spring:
     multipart:
       # 大小限制
       max-file-size: 10MB
-  rabbitmq:
-    host: localhost
-    port: 5672
-    password: guest
-    username: guest
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    password: guest
+#    username: guest
 server:
   address: 0.0.0.0
   port: 8080
@@ -96,3 +96,8 @@ yuapi:
   client:
     access-key: poupeivh6pgcjl3qot4rombsmversfal
     secret-key: 1d33woto7tp9nyatvmyd9twd6d133bnl
+
+# 流程引擎系统配置
+flowable:
+   appid: 123456
+   secret: 123456789
