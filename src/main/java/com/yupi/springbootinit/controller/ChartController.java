@@ -197,8 +197,6 @@ public class ChartController {
         return ResultUtils.success(chartPage);
     }
 
-    // endregion
-
     /**
      * 编辑（用户）
      *
@@ -276,7 +274,6 @@ public class ChartController {
         // 1号,10
         // 2号,20
         // 3号,30
-
         // 构造用户输入
         StringBuilder userInput = new StringBuilder();
         userInput.append("分析需求：").append("\n");
